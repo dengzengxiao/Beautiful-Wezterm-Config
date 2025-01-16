@@ -1,16 +1,20 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.window_close_confirmation = "NeverPrompt"
+config.window_close_confirmation = "NeverPrompt" -- Never comfirm exit
 config.window_decorations = "RESIZE"
 
-config.default_cwd = "D:\\dengzengxiao_projects\\cpp"
-config.default_prog = { "C:\\Users\\Shawn\\AppData\\Local\\Programs\\nu\\bin\\nu.exe", "-l" }
+-- config.default_cwd = "D:\\dengzengxiao_projects\\cpp"
+-- Set Default program to nushell
+config.default_prog = { "%LOCALAPPDATA%\\Programs\\nu\\bin\\nu.exe", "-l" }
 
+-- Config fonts
 config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "LXGW WenKai Mono" })
 config.font_size = 14
+-- Config theme
 config.color_scheme = "Tokyo Night"
 
+-- Config tab bar
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.show_tab_index_in_tab_bar = true
@@ -21,13 +25,15 @@ config.inactive_pane_hsb = {
 	brightness = 0.8,
 }
 
+-- Config cursor
 config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_rate = 600
 config.cursor_blink_ease_out = "Linear"
 
+-- Config window
 wezterm.on("gui-startup", function(cmd)
 	local screen = wezterm.gui.screens().active
-	local width, height = screen.width * 0.5, screen.height * 0.5
+	local width, height = screen.width * 0.8, screen.height * 0.8
 	local tab, pane, window = wezterm.mux.spawn_window(cmd or {
 		position = {
 			x = (screen.width - width) / 2,
