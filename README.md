@@ -18,6 +18,7 @@ FiraCode Nerd Font: [link](https://github.com/ryanoasis/nerd-fonts/releases/down
 
 1. Download .zip
 2. Place the `.wezterm.lua` under `C:\Users\Username\`
-3. Place the `config.nu` and `env.nu` under `C:\Users\Username\AppData\Roaming\nushell`
-4. Create a new Folder under `C:\Users\Username` called .config and place the `starship.toml` inside it
-5. Launch wezterm and enjoy!
+3. Replace the `Username` in the `.wezterm.lua` with your username
+4. Place the `config.nu` and `env.nu` under `C:\Users\Username\AppData\Roaming\nushell`
+5. Create a new Folder under `C:\Users\Username` called .config and place the `starship.toml` inside it
+6. Launch wezterm and enjoy!
