@@ -6,7 +6,7 @@ config.window_decorations = "RESIZE"
 
 -- config.default_cwd = "D:\\dengzengxiao_projects\\cpp"
 -- Set Default program to nushell
-config.default_prog = { "%LOCALAPPDATA%\\Programs\\nu\\bin\\nu.exe", "-l" }
+config.default_prog = { "C:\\Users\\Username\\AppData\\Local\\Programs\\nu\\bin\\nu.exe", "-l" }
 
 -- Config fonts
 config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "LXGW WenKai Mono" })
